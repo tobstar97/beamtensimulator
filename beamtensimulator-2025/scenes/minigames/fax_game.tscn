@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://uq4utp07fdwb"]
+[gd_scene load_steps=2 format=3 uid="uid://uq4utp07fdwb"]
+
+[ext_resource type="Texture2D" uid="uid://d2d7nqw2d6ab1" path="res://assets/gfx/wettfaxen_bg.png" id="1_xx8a7"]
 
 [node name="FaxGame" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xx8a7")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="HintLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="InfoLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
