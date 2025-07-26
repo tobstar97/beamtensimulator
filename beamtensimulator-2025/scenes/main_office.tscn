@@ -47,6 +47,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Productivity" type="Label" parent="TextureRect"]
+layout_mode = 0
 offset_left = 488.0
 offset_top = 152.0
 offset_right = 696.0
@@ -59,6 +60,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Toilet" type="Label" parent="TextureRect"]
+layout_mode = 0
 offset_left = 792.0
 offset_top = 160.0
 offset_right = 920.0
