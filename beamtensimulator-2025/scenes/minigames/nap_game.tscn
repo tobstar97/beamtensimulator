@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://8x7qj7pm6e8r"]
+
+[ext_resource type="Texture2D" uid="uid://d1oiq8v3weqt1" path="res://assets/gfx/nap_room_bg.png" id="1_ipkds"]
+
+[node name="NapGame" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1200.0
+offset_bottom = 800.0
+texture = ExtResource("1_ipkds")
+expand_mode = 1
