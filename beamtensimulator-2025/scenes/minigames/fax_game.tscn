@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://uq4utp07fdwb"]
+[gd_scene load_steps=3 format=3 uid="uid://uq4utp07fdwb"]
 
+[ext_resource type="Script" uid="uid://dot0xn1jipxry" path="res://scripts/fax/fax_game.gd" id="1_i0stg"]
 [ext_resource type="Texture2D" uid="uid://d2d7nqw2d6ab1" path="res://assets/gfx/wettfaxen_bg.png" id="1_xx8a7"]
 
 [node name="FaxGame" type="Node2D"]
+script = ExtResource("1_i0stg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("1_xx8a7")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
@@ -12,6 +15,7 @@ offset_right = 4.0
 offset_bottom = 27.0
 
 [node name="HintLabel" type="Label" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 
