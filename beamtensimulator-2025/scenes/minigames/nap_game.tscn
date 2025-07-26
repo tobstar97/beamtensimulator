@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://8x7qj7pm6e8r"]
+[gd_scene load_steps=6 format=3 uid="uid://8x7qj7pm6e8r"]
 
 [ext_resource type="Script" uid="uid://bqeonnjnukuq0" path="res://scripts/nap/nap_game.gd" id="1_xxijp"]
 [ext_resource type="Texture2D" uid="uid://rg7yucn2awvn" path="res://assets/gfx/schlafen_ohne_boss.png" id="2_0th45"]
 [ext_resource type="Texture2D" uid="uid://dbqwo5guwwmxm" path="res://assets/gfx/schlafen_mit_boss.png" id="3_4yxt2"]
+[ext_resource type="AudioStream" uid="uid://lvawg4rsvec2" path="res://assets/audio/footsteps.mp3" id="4_0th45"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxijp"]
 bg_color = Color(0, 0, 0, 1)
@@ -40,3 +41,6 @@ wait_time = 5.0
 one_shot = true
 
 [node name="AudioBossSteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0th45")
+
+[node name="TimerFootstep" type="Timer" parent="."]
