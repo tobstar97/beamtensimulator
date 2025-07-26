@@ -92,3 +92,13 @@ target_scene_path = "res://scenes/minigames/nap_game.tscn"
 position = Vector2(592, 408)
 shape = SubResource("RectangleShape2D_01122")
 script = SubResource("GDScript_01122")
+
+[node name="KloDoor" type="Area2D" parent="."]
+position = Vector2(264, -8)
+script = ExtResource("4_om1mf")
+target_scene_path = "res://scenes/minigames/klo_game.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KloDoor"]
+position = Vector2(592, 408)
+shape = SubResource("RectangleShape2D_01122")
+script = SubResource("GDScript_01122")
