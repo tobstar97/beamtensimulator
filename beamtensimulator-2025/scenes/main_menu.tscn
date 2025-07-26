@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0uxcv854hae4"]
+
+[ext_resource type="Texture2D" uid="uid://cbglbycb8amuc" path="res://assets/gfx/menu_background.png" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://y2q5hr537j0b" path="res://scripts/spiel_starten.gd" id="2_bqqt6"]
+[ext_resource type="Script" uid="uid://b13xf4734w60e" path="res://scripts/beenden.gd" id="3_wu84c"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1200.0
+offset_bottom = 800.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_l6cm7")
+expand_mode = 1
+
+[node name="SpielStarten" type="Button" parent="."]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 260.0
+offset_top = 578.0
+offset_right = 310.0
+offset_bottom = 628.0
+scale = Vector2(13.6008, 1.72995)
+script = ExtResource("2_bqqt6")
+
+[node name="Beenden" type="Button" parent="."]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 260.0
+offset_top = 683.0
+offset_right = 310.0
+offset_bottom = 733.0
+scale = Vector2(13.6008, 1.72995)
+script = ExtResource("3_wu84c")
+
+[connection signal="pressed" from="SpielStarten" to="SpielStarten" method="_on_pressed"]
+[connection signal="pressed" from="Beenden" to="Beenden" method="_on_pressed"]

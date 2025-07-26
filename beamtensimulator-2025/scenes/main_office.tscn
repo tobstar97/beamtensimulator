@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://wwqp7ujvmsag"]
+
+[ext_resource type="PackedScene" uid="uid://d2cohpd0qy23m" path="res://scenes/player.tscn" id="2_t7ome"]
+[ext_resource type="Texture2D" uid="uid://tixtsq6r6l0v" path="res://assets/gfx/main_office_bg.png" id="7_s5i3m"]
+
+[node name="MainOffice" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1200.0
+offset_bottom = 800.0
+size_flags_vertical = 4
+texture = ExtResource("7_s5i3m")
+expand_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("2_t7ome")]
+position = Vector2(1072, 616)
