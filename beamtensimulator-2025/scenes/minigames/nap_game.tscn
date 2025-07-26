@@ -1,11 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://8x7qj7pm6e8r"]
+[gd_scene load_steps=5 format=3 uid="uid://8x7qj7pm6e8r"]
 
-[ext_resource type="Texture2D" uid="uid://d1oiq8v3weqt1" path="res://assets/gfx/nap_room_bg.png" id="1_ipkds"]
+[ext_resource type="Script" uid="uid://bqeonnjnukuq0" path="res://scripts/nap/nap_game.gd" id="1_xxijp"]
+[ext_resource type="Texture2D" uid="uid://rg7yucn2awvn" path="res://assets/gfx/schlafen_ohne_boss.png" id="2_0th45"]
+[ext_resource type="Texture2D" uid="uid://dbqwo5guwwmxm" path="res://assets/gfx/schlafen_mit_boss.png" id="3_4yxt2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxijp"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="NapGame" type="Node2D"]
+script = ExtResource("1_xxijp")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BackgroundNormal" type="TextureRect" parent="."]
 offset_right = 1200.0
 offset_bottom = 800.0
-texture = ExtResource("1_ipkds")
+texture = ExtResource("2_0th45")
 expand_mode = 1
+
+[node name="BackgroundWithBoss" type="TextureRect" parent="."]
+visible = false
+offset_right = 1200.0
+offset_bottom = 800.0
+texture = ExtResource("3_4yxt2")
+expand_mode = 1
+
+[node name="StatusLabel" type="Label" parent="."]
+offset_left = 288.0
+offset_top = 112.0
+offset_right = 328.0
+offset_bottom = 135.0
+scale = Vector2(9.16426, 4.2094)
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_xxijp")
+text = "Erwischt!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerBoss" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="AudioBossSteps" type="AudioStreamPlayer" parent="."]
