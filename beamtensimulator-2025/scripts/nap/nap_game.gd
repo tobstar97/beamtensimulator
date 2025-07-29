@@ -25,7 +25,7 @@ func _ready():
 	timer_footstep.timeout.connect(_on_TimerFootstep_timeout)
 
 	# Zufällige Zeit bis Boss-Auftritt (3–15 s)
-	var wait_time = randf_range(3.0, 5.0)
+	var wait_time = randf_range(3.0, 10.0)
 	timer_boss.wait_time     = wait_time
 	timer_footstep.wait_time = max(wait_time - 2.0, 0.1)
 
@@ -80,3 +80,8 @@ func _on_TimerBoss_timeout():
 		timer_footstep.wait_time = max(next_wait - 2.0, 0.1)
 		timer_boss.start()
 		timer_footstep.start()
+
+func _input(event):
+	# Nur nach Ende der Sitzung auf ESC reagieren
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://scenes/main_office.tscn")
