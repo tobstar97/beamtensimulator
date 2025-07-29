@@ -81,6 +81,7 @@ func _on_TimerBoss_timeout():
 		timer_boss.start()
 		timer_footstep.start()
 
+
 func _input(event):
 	# Nur nach Ende der Sitzung auf ESC reagieren
 	if event.is_action_pressed("ui_cancel"):
