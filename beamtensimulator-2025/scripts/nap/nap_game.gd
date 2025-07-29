@@ -80,3 +80,8 @@ func _on_TimerBoss_timeout():
 		timer_footstep.wait_time = max(next_wait - 2.0, 0.1)
 		timer_boss.start()
 		timer_footstep.start()
+
+func _input(event):
+	# Nur nach Ende der Sitzung auf ESC reagieren
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://scenes/main_office.tscn")
