@@ -11,6 +11,7 @@ extends Node2D
 
 # === KONSTANTEN ===
 const TIME_PER_COFFEE = 5.0  # Sekunden pro Kaffee
+const TIME_PER_COFFEE = 10.0  # Sekunden pro Kaffee
 const OFFICE_SCENE    = "res://scenes/main_office.tscn"  # Pfad zur Büroszene
 
 # === SPIELSTATUS ===

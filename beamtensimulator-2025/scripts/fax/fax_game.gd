@@ -15,6 +15,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_select"):
 		progress += 5
+		progress += 1
 		progress_bar.value = progress
 		if progress_bar.value >= 100:
 			get_tree().change_scene_to_file(return_scene)
